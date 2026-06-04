@@ -1,0 +1,217 @@
+/* Общие стили сайта: шрифты, сетка, шапка, подвал, анимации */
+
+@font-face {
+  font-family: 'Letov';
+  src: url('./шрифт/Letov.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #FDF9FF;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  color: #040303;
+  background: #FDF9FF;
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.site-canvas {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1440px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  height: auto;
+  pointer-events: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
+  touch-action: manipulation;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tilt-hover {
+  display: inline-block;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: left bottom;
+}
+
+.tilt-hover:hover {
+  transform: skewX(-15deg);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(21px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding: 7.5px 40px 3.75px;
+  background: color-mix(in srgb, #FDF9FF 90%, transparent);
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1440px;
+  padding-top: 54px;
+}
+
+.header__logo {
+  position: absolute;
+  top: 10.5px;
+  left: 40px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center bottom;
+}
+
+.header__logo:hover {
+  transform: skewX(-15deg);
+}
+
+.header__logo img {
+  width: 42.6px;
+  height: 12.75px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 66px;
+  width: 100%;
+  margin-top: auto;
+  padding-bottom: 1.5px;
+}
+
+.header__link {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+/* Footer */
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 10px 40px;
+  background: #FDF9FF;
+  box-sizing: border-box;
+}
+
+.footer__signature-wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: inline-block;
+  transform: translate(-50%, -50%);
+  transform-origin: center bottom;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer__signature-wrap:hover {
+  transform: translate(-50%, -50%) skewX(-15deg);
+}
+
+.footer__signature {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  flex-shrink: 0;
+}
+
+.footer__portrait-wrap {
+  display: inline-flex;
+  flex-shrink: 0;
+  transform-origin: center bottom;
+  line-height: 0;
+}
+
+.footer__portrait-wrap.tilt-hover {
+  transform-origin: center bottom;
+}
+
+.footer__portrait {
+  width: 45px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.footer__logo-wrap {
+  display: inline-flex;
+  flex-shrink: 0;
+  transform-origin: right bottom;
+}
+
+.footer__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}

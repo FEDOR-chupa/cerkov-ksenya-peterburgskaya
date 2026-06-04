@@ -1,0 +1,200 @@
+/* Page 4 — Биография */
+
+.page-bio {
+  background: #040303;
+  color: #FDF9FF;
+}
+
+.page-bio .header__link {
+  color: #040303;
+}
+
+.page-bio main,
+.page-bio .bio-main {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.bio-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1440px;
+}
+
+.bio-hero {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  margin-top: 0;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.bio-hero__canvas {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.page-bio .site-canvas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+
+.page-bio .bio-main {
+  flex-shrink: 0;
+}
+
+.page-bio .footer {
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+
+.bio-hero__ksp {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: left top;
+}
+
+
+.bio-hero__letov {
+  position: absolute;
+  top: 14%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.bio-hero__letov-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.bio-hero__name {
+  font-family: 'Letov', serif;
+  font-size: 74px;
+  font-weight: normal;
+  line-height: 1;
+  color: #FDF9FF;
+  text-transform: uppercase;
+}
+
+.bio-hero__city {
+  font-family: 'Letov', serif;
+  font-size: 130.5px;
+  font-weight: normal;
+  line-height: 0.9;
+  color: #FDF9FF;
+  text-transform: uppercase;
+}
+
+.bio-hero__bsf {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: left top;
+  pointer-events: none;
+}
+
+.bio-hero__layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 850px 120px;
+  pointer-events: none;
+  height: auto;
+  max-height: 100%;
+  width: auto;
+  box-sizing: border-box;
+}
+
+.bio-hero__col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+  width: 490px;
+  height: 1055px;
+  gap: auto;
+  pointer-events: auto;
+}
+
+.bio-hero__col--left {
+  align-items: flex-start;
+}
+
+.bio-hero__col--right {
+  align-items: flex-end;
+}
+
+.bio-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.bio-hero__col--right .bio-block {
+  align-items: flex-end;
+}
+
+.bio-block__title {
+  font-family: 'Inter', sans-serif;
+  font-size: 18.5px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #FDF9FF;
+  text-transform: uppercase;
+}
+
+.bio-hero__col--left .bio-block__title {
+  text-align: left;
+}
+
+.bio-hero__col--right .bio-block__title {
+  text-align: right;
+}
+
+.bio-block__text {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #FDF9FF;
+}
+
+.bio-hero__col--left .bio-block__text {
+  text-align: left;
+}
+
+.bio-hero__col--right .bio-block__text {
+  text-align: right;
+}
+

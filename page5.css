@@ -1,0 +1,195 @@
+/* Page 5 — Богослужения */
+
+.page-services {
+  background: #040303;
+  color: #FDF9FF;
+}
+
+.page-services .header {
+  background: rgba(4, 3, 3, 0.92);
+}
+
+.page-services .header__link {
+  color: #FDF9FF;
+}
+
+.page-services .header__logo img {
+  mix-blend-mode: screen;
+}
+
+.services-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1440px;
+  padding-top: 54px;
+}
+
+.services-schedule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding-top: 100px;
+  padding-bottom: 250px;
+  background: #040303;
+  box-sizing: border-box;
+}
+
+.services-schedule__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  margin-bottom: 250px;
+  text-align: center;
+}
+
+.services-schedule__title-letov {
+  font-family: 'Letov', serif;
+  font-size: 74px;
+  font-weight: normal;
+  line-height: 0.95;
+  color: #FDF9FF;
+  text-transform: uppercase;
+}
+
+.services-schedule__title-sub,
+.services-schedule__title-month {
+  font-family: 'Inter', sans-serif;
+  font-size: 74px;
+  font-weight: 200;
+  line-height: 1.05;
+  color: #FDF9FF;
+  text-transform: uppercase;
+}
+
+.services-schedule__title-sub {
+  margin-top: 16px;
+}
+
+.services-schedule__title-month {
+  margin-top: 0;
+}
+
+.services-schedule__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 960px;
+}
+
+.services-schedule__heading.reveal {
+  transform: translateY(28px);
+}
+
+.services-schedule__heading.reveal.is-visible {
+  transform: translateY(0);
+}
+
+.services-accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid rgba(253, 249, 255, 0.28);
+}
+
+.services-accordion.reveal {
+  transform: translateY(36px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.services-accordion.reveal.is-visible {
+  transform: translateY(0);
+}
+
+.services-accordion__head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 48px;
+  width: 920px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 26px 0;
+  border: none;
+  background: transparent;
+  color: #FDF9FF;
+  text-align: left;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.services-accordion__date {
+  flex-shrink: 0;
+  width: 200px;
+  font-family: 'Inter', sans-serif;
+  font-size: 37px;
+  font-weight: 200;
+  line-height: 1.15;
+  color: #FDF9FF;
+  text-transform: uppercase;
+}
+
+.services-accordion__line {
+  flex: 0 1 672px;
+  width: 672px;
+  max-width: 672px;
+  font-family: 'Inter', sans-serif;
+  font-size: 37px;
+  font-weight: 100;
+  line-height: 1.15;
+  color: #FDF9FF;
+  text-transform: uppercase;
+}
+
+.services-accordion__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 920px;
+  max-width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 0 0 248px;
+  box-sizing: border-box;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), padding 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.services-accordion__body p {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  gap: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 28px;
+  font-weight: 100;
+  line-height: 1.15;
+  color: #FDF9FF;
+  text-transform: uppercase;
+}
+
+.services-accordion__body .services-accordion__time {
+  flex-shrink: 0;
+  margin-right: 0.25em;
+}
+
+.services-accordion__body .services-accordion__text.tilt-hover {
+  flex: 1 1 auto;
+  display: inline-block;
+  min-width: 0;
+  transform-origin: center bottom;
+}
+
+.services-accordion.is-open .services-accordion__body {
+  padding-bottom: 28px;
+}
